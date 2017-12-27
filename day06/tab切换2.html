@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab切换</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin:0;
+        }
+        #tab {
+            width:300px;
+            height:30px;
+            border: 5px solid silver;
+            margin:0 auto;
+            position: absolute;
+        }
+        #tab ul li {
+            float:left;
+            width:100px;
+            height:30px;
+           /* padding:10px;*/
+            list-style: none;
+            line-height: 30px;
+            font-size: 20px;
+            color:red;
+            text-align: center;
+        }
+         #tab .con {
+            width:300px;
+            height:370px;
+            background-color: darkslategray;
+            display: none;
+            position:absolute;
+            /*float: left;*/
+            top:30px;
+
+        }
+    </style>
+    <script type="text/javascript">
+
+
+        function showOrHide(id, dp){
+            document.getElementById(id).style.display=dp;
+        }
+    </script>
+</head>
+<body>
+
+<div id="tab">
+    <ul>
+       <li style="background-color: blue"  onmouseover="showOrHide('con1','block')"
+           onmouseout="showOrHide('con1','none')">新闻</li>
+       <li style="background-color: brown"  onmouseover="showOrHide('con2','block')"
+           onmouseout="showOrHide('con2','none')">图片</li>
+       <li style="background-color: green"  onmouseover="showOrHide('con3','block')"
+           onmouseout="showOrHide('con3','none')">其他</li>
+    </ul>
+    <div id="con1" class="con" style="background-color:blue " onmouseover="showOrHide('con1','block')"
+         onmouseout="showOrHide('con1','none')">1</div>
+    <div id="con2" class="con" style="background-color:brown " onmouseover="showOrHide('con2','block')"
+         onmouseout="showOrHide('con2','none')">2</div>
+    <div id="con3" class="con" style="background-color:green " onmouseover="showOrHide('con3','block')"
+         onmouseout="showOrHide('con3','none')">3</div>
+</div>
+</body>
+</html>
